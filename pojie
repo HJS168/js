@@ -1746,9 +1746,6 @@ https:\/\/www\.xmind\.cn\/\_res\/devices url script-response-body https://raw.gi
 #美篇vip
 ^https:\//poster.meipian.cn\/5.3\/user\/info url script-response-body https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/meipian.js
 
-#即刻 yellow
-^https:\//api.ruguoapp.com\/1.0\/users\/profile url script-response-body https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/jike.js
-
 #时光手账VIP
 ^https:\//api.shouzhang.com\/memcenterlk\/member\/firstpage.do url script-response-body https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/shouzhang.js
 
