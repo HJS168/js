@@ -2382,7 +2382,6 @@ https://zhuanlan\.zhihu\.com/api/articles/\d+/recommendation url reject-200
 ^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/user_related_modul url reject
 # Wiki(618晒物活动推广，将来可能不是广告)
 ^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/wiki_related_modul url reject
-
 # 开屏去广告
 ^https?:\/\/app-api\.smzdm\.com\/util\/loading url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
 # 首页去广告
@@ -2414,6 +2413,10 @@ https://zhuanlan\.zhihu\.com/api/articles/\d+/recommendation url reject-200
 
 #跳过中间界面，支付宝链接、被封禁链接进行通知弹窗跳转，在微信中用快照显示被封禁的链接（可选），在微信中进行强制重定向（可选），群聊 / 扫码均可使用，可选项可在脚本 2、3 行更改，也可在 BoxJs 中更改。
 ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? url script-response-body https://raw.githubusercontent.com/zZPiglet/Task/master/asset/UnblockURLinWeChat.js
+
+# 贴吧去广告
+^(http:\/\/c\.tieba\.baidu\.com\/(tiebaads\/commonbatch|c\/s\/sync)|https:\/\/afd\.baidu\.com\/afd\/entry) url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js
+^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized) url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js
 
 # google自动翻页
 ^https?:\/\/www\.google\..*\/search url script-response-body https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/endlessgoogle.js
