@@ -2488,3 +2488,6 @@ URL-REGEX,^https?:\/\/api\.zhihu\.com\/commercial_api\/launch_v2\? url reject-di
 
 #中青分享阅读助力10次
 https:\/\/script\.baertt\.com\/count2\/callback url script-request-header https://gitee.com/curtinlv/qx/raw/master/Script/youthShareRead.js
+
+#BoxJs
+https?:\/\/boxjs\.(com|net) url script-analyze-echo-response https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
