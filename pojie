@@ -235,18 +235,16 @@ https://ad.12306.cn/* url reject
 # > 01 去哪儿开屏广告@ddgksf2013
 https://homefront.qunar.com/front/splash/ad url reject
 
-
+#贴吧去广告
 ^(http\:\/\/c\.tieba\.baidu\.com\/(tiebaads\/commonbatch|c\/s\/sync)|https\:\/\/afd\.baidu\.com\/afd\/entry) url script-response-body https://raw.githubusercontent.com/Nick-workflow/script-test/main/bdtb/tb-json.js
 
 ^http\:\/\/c\.tieba\.baidu\.com\/c\/f\/((frs|pb)\/page|excellent\/personalized) url script-response-body https://raw.githubusercontent.com/Nick-workflow/script-test/main/bdtb/tb-proto.js
 
-
+#解锁天气数据类型
 ^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather\/.* url request-header If-None-Match:.+\r\n request-header \r\n
-
 ^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/availability\/.* url script-response-body https://raw.githubusercontent.com/VirgilClyne/iRingo/beta/js/Weather.Availability.beta.js
 ^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather\/.* url script-response-body https://raw.githubusercontent.com/VirgilClyne/iRingo/beta/js/Weather.beta.js
 ^https?:\/\/weather-map\.apple\.com\/(v1|v2)\/mapOverlay\/.*(\?.*country=CN.*) url script-request-header https://raw.githubusercontent.com/VirgilClyne/iRingo/beta/js/Weather.Map.beta.js
-
 
 
 
